@@ -1,10 +1,13 @@
-import logo from "./logo.svg"
+import "./style.css"
 
 function App() {
   return (
     <div className="App">
-      <img src="/logo512.png"/>
-      <img src={logo}/>
+        {process.env.NODE_ENV === "development" &&(
+          <>
+          <h3>{process.env.NODE_ENV} Oratmında Çalışıyorsunuz</h3>
+          </>
+        )}
     </div>
   );
 }
